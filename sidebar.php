@@ -1,21 +1,32 @@
-				<div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+<?php
+/**
+ * The Sidebar containing the main widget areas.
+ *
+ * @package TGL
+ */
+?>
+	<div id="secondary" class="widget-area" role="complementary">
+		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+			<aside id="search" class="widget widget_search">
+				<?php get_search_form(); ?>
+			</aside>
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+			<aside id="archives" class="widget">
+				<h1 class="widget-title"><?php _e( 'Archives', 'TGL' ); ?></h1>
+				<ul>
+					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+				</ul>
+			</aside>
 
-					<?php else : ?>
+			<aside id="meta" class="widget">
+				<h1 class="widget-title"><?php _e( 'Meta', 'TGL' ); ?></h1>
+				<ul>
+					<?php wp_register(); ?>
+					<li><?php wp_loginout(); ?></li>
+					<?php wp_meta(); ?>
+				</ul>
+			</aside>
 
-						<?php
-							/*
-							 * This content shows up if there are no widgets defined in the backend.
-							*/
-						?>
-
-						<div class="no-widgets">
-							<p><?php _e( 'This is a widget ready area. Add some and they will appear here.', 'bonestheme' );  ?></p>
-						</div>
-
-					<?php endif; ?>
-
-				</div>
+		<?php endif; // end sidebar widget area ?>
+	</div><!-- #secondary -->
