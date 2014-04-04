@@ -1,6 +1,6 @@
 /*
 Theme Name: TGL
-Theme URI: http://underscores.me/
+Theme URI: http://www.e-tgl.cl/
 Author: Rigoberto Cortazar
 Author URI: http://www.pixi.cl
 Description: Tema desarrollado para TGL S.A.chile
@@ -56,7 +56,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: inherit;
+	font-family: Helvetica;
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -356,28 +356,17 @@ a:focus,
 a:active {
 	color: midnightblue;
 }
-/*-------------------------------------------------------------
- HEADER
- ------------------------------------------------------------*/
-.logo{
-	position: relative;
-	float:right;
-}
-
-
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	background: #FFFFFF;
 	clear: both;
 	display: block;
 	float: left;
+	background: #41b7c8;
+	color: #6C6C6C;
 	width: 100%;
-	min-height: 60px;
-	font-family: Helvetica;
-
 }
 .main-navigation ul {
 	list-style: none;
@@ -385,28 +374,36 @@ a:active {
 	padding-left: 0;
 	
 }
-.main-navigation li:hover {
-}
 .main-navigation li {
 	float: left;
 	position: relative;
-	padding: 20px;
+	padding: 15px;
+}
+.main-navigation li:hover {
+	-webkit-transition: background 300ms ease;
+	-moz-transition: background 300ms ease;
+	-ms-transition: background 300ms ease;
+	-o-transition: background 300ms ease;
+	transition: background 300ms ease;
+	background: #C20000;
 }
 .main-navigation a {
-	color: #B3B3B3;
+	font-size: 25px;
+	font-family: 'Roboto Condensed', sans-serif;
 	display: block;
 	text-decoration: none;
+	color: #626366;
 }
 .main-navigation a:hover {
-	color: #41b7c8;
+	color: #fff;
 }
 .main-navigation ul ul {
-	background: #FFFFFF;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
 	left: 0;
 	position: absolute;
-	top: 64px;
+	top: 1.5em;
 	z-index: 99999;
 }
 .main-navigation ul ul ul {
@@ -414,27 +411,19 @@ a:active {
 	top: 0;
 }
 .main-navigation ul ul a {
-	color: #B3B3B3;
 	width: 200px;
 }
 .main-navigation ul ul li {
 }
 .main-navigation li:hover > a {
-	-webkit-transition: color 200ms ease;
-	-moz-transition: color 200ms ease;
-	-ms-transition: color 200ms ease;
-	-o-transition: color 200ms ease;
-	transition: color 200ms ease;
-	color: #41b7c8;
+	color: #fff;
 }
 .main-navigation ul ul :hover > a {
-	color: #41b7c8;
+	color: #fff;
 }
 .main-navigation ul ul a:hover {
-	color: #41b7c8;
 }
 .main-navigation ul li:hover > ul {
-
 	display: block;
 }
 .main-navigation .current_page_item a,
@@ -448,14 +437,29 @@ a:active {
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
+		font-size: 25px;
+		font-family: 'Roboto Condensed', sans-serif;
 		display: block;
-		background: #FFFFFF;
-		height: 60px;
 	}
-
+	.main-navigation li {
+		width: 100%;
+	}
 	.main-navigation ul {
 		display: none;
 	}
+	.logo{
+		min-width:100%;
+		width: 100%;
+		height: auto;
+	}
+	#services{
+	position: relative;
+	top:-218px;
+	height: 50px;
+	background: #C20000;
+	color: #FFFFFF;
+	display: none;
+}
 }
 .site-main .comment-navigation,
 .site-main .paging-navigation,
@@ -476,7 +480,6 @@ a:active {
 	text-align: right;
 	width: 50%;
 }
-
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -658,6 +661,7 @@ a:active {
 	margin: 0.8075em 0;
 }
 .site-main .gallery {
+	
 	margin-bottom: 1.5em;
 }
 .gallery-caption {
@@ -680,4 +684,31 @@ embed,
 iframe,
 object {
 	max-width: 100%;
+}
+/*-------------------
+ * custom
+ -------------------*/
+.logo{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top: 10px;
+	width: 300px;
+	height: auto;
+	min-height: 67px;
+	float: right;
+	background: #FFFFFF;
+}
+.line{
+	width: 100%;
+	height: 3px;
+	background: #C20000;
+}
+#services{
+	position: relative;
+	height: 50px;
+	background: #C20000;
+	color: #FFFFFF;
+	display: none;
 }
