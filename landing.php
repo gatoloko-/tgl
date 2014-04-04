@@ -19,13 +19,14 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php if ( function_exists( 'show_simpleresponsiveslider' ) ) show_simpleresponsiveslider(); ?>
 <!-- #site-navigation -->
-<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'TGL' ); ?></h1>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'TGL' ); ?></a>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-</nav>
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+				<h1 class="menu-toggle"><?php _e( 'Menu', 'TGL' ); ?></h1>
+				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'TGL' ); ?></a>
+	
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	</nav>
 <!-- #site-navigation -->
 		
 		
@@ -36,3 +37,6 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+	
+
+<div class="logo"><?php echo wp_get_attachment_image( 18, 'full' ); ?></div>
